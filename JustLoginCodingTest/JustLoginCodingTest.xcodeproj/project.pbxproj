@@ -16,6 +16,15 @@
 		ED9428262CE492B000B894B9 /* JustLoginCodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9428252CE492B000B894B9 /* JustLoginCodingTestTests.swift */; };
 		ED9428302CE492B100B894B9 /* JustLoginCodingTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94282F2CE492B100B894B9 /* JustLoginCodingTestUITests.swift */; };
 		ED9428322CE492B100B894B9 /* JustLoginCodingTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9428312CE492B100B894B9 /* JustLoginCodingTestUITestsLaunchTests.swift */; };
+		ED9428492CE494AF00B894B9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ED9428482CE494AF00B894B9 /* Alamofire */; };
+		ED9428522CE4953300B894B9 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9428512CE4953300B894B9 /* NetworkHelper.swift */; };
+		ED9428562CE4961400B894B9 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED9428552CE4961400B894B9 /* NewsTableViewCell.xib */; };
+		ED9428572CE4961400B894B9 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9428542CE4961400B894B9 /* NewsTableViewCell.swift */; };
+		ED9428592CE4985900B894B9 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9428582CE4985900B894B9 /* NewsModel.swift */; };
+		ED94285B2CE49AAB00B894B9 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED94285A2CE49AAB00B894B9 /* NewsViewModel.swift */; };
+		ED94285E2CE49CB100B894B9 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = ED94285D2CE49CB100B894B9 /* netfox */; };
+		ED9428612CE49CFE00B894B9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ED9428602CE49CFE00B894B9 /* Kingfisher */; };
+		ED9428632CE49DF000B894B9 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9428622CE49DF000B894B9 /* NewsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,12 @@
 		ED94282B2CE492B000B894B9 /* JustLoginCodingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustLoginCodingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED94282F2CE492B100B894B9 /* JustLoginCodingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLoginCodingTestUITests.swift; sourceTree = "<group>"; };
 		ED9428312CE492B100B894B9 /* JustLoginCodingTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLoginCodingTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED9428512CE4953300B894B9 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		ED9428542CE4961400B894B9 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		ED9428552CE4961400B894B9 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		ED9428582CE4985900B894B9 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		ED94285A2CE49AAB00B894B9 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		ED9428622CE49DF000B894B9 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9428612CE49CFE00B894B9 /* Kingfisher in Frameworks */,
+				ED94285E2CE49CB100B894B9 /* netfox in Frameworks */,
+				ED9428492CE494AF00B894B9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +117,11 @@
 		ED94280D2CE492B000B894B9 /* JustLoginCodingTest */ = {
 			isa = PBXGroup;
 			children = (
-				ED94280E2CE492B000B894B9 /* AppDelegate.swift */,
-				ED9428102CE492B000B894B9 /* SceneDelegate.swift */,
-				ED9428122CE492B000B894B9 /* ViewController.swift */,
-				ED9428142CE492B000B894B9 /* Main.storyboard */,
+				ED94284F2CE494FF00B894B9 /* Networking */,
+				ED94284E2CE494D600B894B9 /* Utilities */,
+				ED94284B2CE494BD00B894B9 /* Modules */,
+				ED94284A2CE494B800B894B9 /* Storyboards */,
 				ED9428172CE492B000B894B9 /* Assets.xcassets */,
-				ED9428192CE492B000B894B9 /* LaunchScreen.storyboard */,
 				ED94281C2CE492B000B894B9 /* Info.plist */,
 			);
 			path = JustLoginCodingTest;
@@ -127,6 +144,69 @@
 			path = JustLoginCodingTestUITests;
 			sourceTree = "<group>";
 		};
+		ED94284A2CE494B800B894B9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ED9428142CE492B000B894B9 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ED94284B2CE494BD00B894B9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				ED94284D2CE494D000B894B9 /* NewsDetail */,
+				ED94284C2CE494C800B894B9 /* News */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		ED94284C2CE494C800B894B9 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				ED9428532CE4956F00B894B9 /* NewsTableViewCell */,
+				ED9428122CE492B000B894B9 /* ViewController.swift */,
+				ED9428582CE4985900B894B9 /* NewsModel.swift */,
+				ED94285A2CE49AAB00B894B9 /* NewsViewModel.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		ED94284D2CE494D000B894B9 /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ED9428622CE49DF000B894B9 /* NewsDetailViewController.swift */,
+			);
+			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		ED94284E2CE494D600B894B9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ED94280E2CE492B000B894B9 /* AppDelegate.swift */,
+				ED9428102CE492B000B894B9 /* SceneDelegate.swift */,
+				ED9428192CE492B000B894B9 /* LaunchScreen.storyboard */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		ED94284F2CE494FF00B894B9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				ED9428512CE4953300B894B9 /* NetworkHelper.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		ED9428532CE4956F00B894B9 /* NewsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ED9428542CE4961400B894B9 /* NewsTableViewCell.swift */,
+				ED9428552CE4961400B894B9 /* NewsTableViewCell.xib */,
+			);
+			path = NewsTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +223,11 @@
 			dependencies = (
 			);
 			name = JustLoginCodingTest;
+			packageProductDependencies = (
+				ED9428482CE494AF00B894B9 /* Alamofire */,
+				ED94285D2CE49CB100B894B9 /* netfox */,
+				ED9428602CE49CFE00B894B9 /* Kingfisher */,
+			);
 			productName = JustLoginCodingTest;
 			productReference = ED94280B2CE492B000B894B9 /* JustLoginCodingTest.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +300,11 @@
 				Base,
 			);
 			mainGroup = ED9428022CE492B000B894B9;
+			packageReferences = (
+				ED9428472CE494AF00B894B9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				ED94285C2CE49CB100B894B9 /* XCRemoteSwiftPackageReference "netfox" */,
+				ED94285F2CE49CFE00B894B9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = ED94280C2CE492B000B894B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +323,7 @@
 			files = (
 				ED9428182CE492B000B894B9 /* Assets.xcassets in Resources */,
 				ED94281B2CE492B000B894B9 /* Base in Resources */,
+				ED9428562CE4961400B894B9 /* NewsTableViewCell.xib in Resources */,
 				ED9428162CE492B000B894B9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +349,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9428632CE49DF000B894B9 /* NewsDetailViewController.swift in Sources */,
+				ED9428592CE4985900B894B9 /* NewsModel.swift in Sources */,
+				ED9428522CE4953300B894B9 /* NetworkHelper.swift in Sources */,
 				ED9428132CE492B000B894B9 /* ViewController.swift in Sources */,
+				ED9428572CE4961400B894B9 /* NewsTableViewCell.swift in Sources */,
+				ED94285B2CE49AAB00B894B9 /* NewsViewModel.swift in Sources */,
 				ED94280F2CE492B000B894B9 /* AppDelegate.swift in Sources */,
 				ED9428112CE492B000B894B9 /* SceneDelegate.swift in Sources */,
 			);
@@ -607,6 +703,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED9428472CE494AF00B894B9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
+		ED94285C2CE49CB100B894B9 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.0;
+			};
+		};
+		ED94285F2CE49CFE00B894B9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED9428482CE494AF00B894B9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED9428472CE494AF00B894B9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		ED94285D2CE49CB100B894B9 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED94285C2CE49CB100B894B9 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
+		};
+		ED9428602CE49CFE00B894B9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED94285F2CE49CFE00B894B9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED9428032CE492B000B894B9 /* Project object */;
 }
